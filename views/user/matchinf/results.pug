@@ -1,0 +1,27 @@
+extends ../inc/layout    
+block content
+    link(href='user/layout/styles/matchinf.css', rel='stylesheet', type='text/css', media='all')
+    #wrapper
+        #wrapper1
+            #resMain
+                | Matches
+                - if(data.length === 0){
+                div(style='background-color : white ; font: 20px calibri ; padding: 1%') Sorry, No matches have been played currently. The results will be published soon as soon as it arrives.
+                - }
+                - for(var i = 0 ; i < data.length ; i++){
+                #result
+                    #rightFloatDiv
+                        .result2(style='text-align : center')
+                            | Team #{data[i].winningTeam} wins by #{data[i].winBy} #{data[i].winType}
+                        a(href='/matchScores?matchNo='+data[i].position id='scoresLink') Scorecard
+                    .result1
+                        b
+                            | #{data[i].dateStart.toDateString()}
+                            br
+                            | #{data[i].type} : Team #{data[i].team1} vs Team #{data[i].team2}
+                        br
+                        |Team #{data[i].team1} #{data[i].run1}/#{data[i].wicket1} (#{data[i].over1}/50 ov) : Team #{data[i].team2} #{data[i].run2}/#{data[i].wicket2} (#{data[i].over2}/50 ov)
+                        br
+                        |Man of the match : #{data[i].manOfMatch}
+                        br
+                - }

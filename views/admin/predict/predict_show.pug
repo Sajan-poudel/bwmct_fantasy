@@ -1,0 +1,57 @@
+extends ../inc/layout
+block content
+  
+  // Create database!
+  .col-md-6  
+    .content-box-large    
+      .panel-heading
+        .panel-title Create New Prediction
+      .panel-body
+        form(action='', method='POST')
+          fieldset
+            
+            h2 Showing all the predictions
+
+            //Display the data in the table dynamically
+            table.table.table-striped
+                thead
+                    tr
+                        th(scope='col') #
+                        th(scope='col') Name
+                        th(scope='col') Id
+                        th(scope='col') Team
+                        th(scope='col') Player
+                        th(scope='col') Message
+                tbody
+                    each data,i in datas
+                        tr
+                            th(scope='row') #{i+1}
+                            td #{data.user_name}
+                            td #{data.user_id}
+                            td #{data.user_team}
+                            td #{data.user_player}
+                            td #{data.user_secret}
+            
+            br
+
+            h3 Publish the result
+            form
+                .form-group
+                    label(for='exampleFormControlSelect1') Winnig team
+                    select#exampleFormControlSelect1.form-control(name='team', required='')
+                        option #{datas1[0].team1_name}
+                        option #{datas1[0].team2_name}
+
+                .form-group
+                    label(for='exampleFormControlSelect1') Man of the match
+                    select#exampleFormControlSelect1.form-control(name='player', required='')
+                        each player in players
+                            option #{player}
+                       
+                .form-group
+                    button.btn.btn-info(type='submit', name='action') Publish the results
+
+            if message
+                .alert.alert-warning
+                    strong Winner!
+                    |  #{message}

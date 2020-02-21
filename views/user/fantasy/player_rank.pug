@@ -1,0 +1,26 @@
+extends ../inc/layout
+block content
+    include fantasy_nav
+    .wrapper.row2
+        section.hoc.container.clear
+            h2  Ranking all the Players on the basis of their Points
+            table.table.table-striped
+                thead
+                    tr
+                        th(scope='col') #SN
+                        th(scope='col') Image
+                        th(scope='col') Player Name
+                        th(scope='col') Team
+                        th(scope='col') Points
+                    each data,i in datas
+                        tr
+                            th #{i+1}
+                            th 
+                                a(href=`/player_profile?name=${data.name}`)
+                                    img(src='user/images/demo/avatarp.png', style='height:6em; width:8em;')
+                            th 
+                                a(href=`/player_profile?name=${data.name}`)
+                                    p #{data.name}
+                            th #{data.teamName}
+                            th #{data.points}
+                tbody 

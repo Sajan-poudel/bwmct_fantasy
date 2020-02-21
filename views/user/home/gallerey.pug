@@ -1,0 +1,26 @@
+// gallery wrapper
+.wrapper.bgded.overlay(style="background-image:url('user/images/demo/backgrounds/bg2.jpg');")
+  section.hoc.container.clear
+    
+    h2.font-x3.uppercase.btmspace-80.underlined
+      | Gallery 
+      a(href='gallery') Glimpses
+
+    .group.center.btmspace-50
+      each data,i in gallery_data
+        if i==0 
+          figure.one_quarter.first
+            img(src='uploads/gall/'+data.post_image, alt='')
+            figcaption
+              p
+                a(href='gallery') #{data.post_name}
+        else
+          figure.one_quarter
+              img(src='uploads/gall/'+data.post_image, alt='')
+              figcaption
+                p
+                  a(href='gallery') #{data.post_name}
+
+    p
+      a.btn.medium(href='gallery') See All
+// gallerey ends here

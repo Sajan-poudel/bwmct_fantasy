@@ -1,0 +1,219 @@
+extends ../inc/layout
+block content
+    
+    include fantasy_nav
+    link(rel='stylesheet', href='user/layout/styles/pickteamstyle.css')
+    link(rel='stylesheet', href='user/layout/styles/w3.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
+  
+    
+    .two_third.first(style='background-color:#EEE;')
+        .wrapper.bgded.overlay(style="background-image:url('user/images/demo/cricket pitch.jpg'); width:99%; margin-left:3px; margin-right:3px;")
+            section.hoc.container.clear
+                // main body
+                // ################################################################################################
+                hr(style='text-align:center;')
+                h4#price Budget: 100m
+                br
+                #playing
+                    div(style='display:flex; justify-content:center; align-items:center;')
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                    
+                    div(style='display:flex; justify-content:center; align-items:center;')
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        
+                    div(style='display:flex; justify-content:center; align-items:center;')
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                    
+                    div(style='display:flex; justify-content:center; align-items:center;')
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                        .card
+                            img(src='user/images/demo/profile.jpg', alt='Avatar')
+                            br
+                            hr(style='margin:0px;')
+                            .btn-group
+                                button.w3-button.w3-green +
+                                button.w3-button.w3-red(style='float:right;') x
+                            .container
+                                h6(style='margin:0px;') None
+                                h6 XXXX
+                .clear
+            hr
+            
+            // ################################################################################################
+        .clear
+        
+        div(style='display:flex; justify-content:center; align-items:center;')
+            div
+            br
+            button#save.w3-button.w3-yellow(style='margin: 0 10px 20px 0;') Save
+            button.w3-button.w3-purple(style='margin:0 10px 20px 0;') Discard
+            br
+            .clear
+
+    .one_third(style='background-color:#EEE; margin-top:4px; margin-left:2%;')
+            div
+                div(style='display:flex; justify-content:center;')
+                h5 Select Player
+                .dropdown
+                    button.dropbtn Sort By:
+                    .dropdown-content
+                        a#naam(href='#') Name
+                        a#paisa(href='#') Price
+                        a#anka(htef='#') Points
+                        a#samuha(href='#') team                
+                div(style='display:flex; justify-content:center;')
+                    table.container
+                        thead
+                            tr
+                                th
+                                    h6 Player
+                                th
+                                    h6 Team
+                                th
+                                    h6 Total Points
+                                th
+                                    h6 Price
+                        tbody#names
+                            
+                            each plr in Team8
+                                tr
+                                    td.name #{plr.name}
+                                    td #{plr.teamName}
+                                    td #{plr.points}
+                                    td #{plr.price}
+                            
+                            each plr in Team9
+                                tr
+                                    td.name #{plr.name}
+                                    td #{plr.teamName}
+                                    td #{plr.points}
+                                    td #{plr.price}
+
+                            each plr in Team10
+                                tr
+                                    td.name #{plr.name}
+                                    td #{plr.teamName}
+                                    td #{plr.points}
+                                    td #{plr.price}
+
+                            each plr in Team11
+                                tr
+                                    td.name #{plr.name}
+                                    td #{plr.teamName}
+                                    td #{plr.points}
+                                    td #{plr.price}
+
+                            each plr in Team12A
+                                tr
+                                    td.name #{plr.name}
+                                    td #{plr.teamName}
+                                    td #{plr.points}
+                                    td #{plr.price}
+
+                            each plr in Team12B
+                                tr
+                                    td.name #{plr.name}
+                                    td #{plr.teamName}
+                                    td #{plr.points}
+                                    td #{plr.price}
+
+    script(src='user/layout/scripts/pick.js')
+    script(src='user/layout/scripts/short.js')                                                                                 

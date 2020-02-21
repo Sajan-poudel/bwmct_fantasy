@@ -1,0 +1,28 @@
+extends ../inc/layout
+block content
+    include fantasy_nav
+    .wrapper.row2
+        section.hoc.container.clear
+            h2  Your Team Points
+            table.table.table-striped
+                
+                if datas
+                    thead
+                        tr
+                            th(scope='col') #SN
+                            th(scope='col') Player Image
+                            th(scope='col') Player Name
+                            th(scope='col') Total
+                    tbody
+                        each data,i in datas
+                            tr
+                                td #{i+1}
+                                td 
+                                    a(href=`/player_profile?name=${data.plrName}`)
+                                        img(src='user/images/demo/avatarp.png', height='42', width='42')
+                                td 
+                                    a(href=`/player_profile?name=${data.plrName}`)
+                                        |#{data.plrName}
+                                td #{data.points}
+                else
+                    p Your points will be shown when your players have played the game

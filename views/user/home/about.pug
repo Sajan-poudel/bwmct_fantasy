@@ -1,0 +1,118 @@
+include ../inc/header
+include ../inc/nav
+
+
+.wrapper.row3
+  main.hoc.container.clear
+    // main body
+    // ################################################################################################
+    .content
+      // ################################################################################################
+      .card
+        h3 About BWMCT
+        hr(style='color: grey;')
+        br
+        p
+          | BWMCT is a great festival of GBS. It is a cricket tournament organised intra-school by the class 12 family in the memory of
+          | our former Principal Late. Brianwood who built the cricket pitch and has established cricket in GBS. This is the 2
+          sup nd
+          | 				BWMCT (Previously known as KCT) being organised by the NEB batch 074/075 in a new and technified way.
+        br
+        style.
+          div.card {
+          margin:0 0 10% 10%;
+          padding: 10px;
+          width: 80%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          text-align: center;
+          }
+          div.card:hover {
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+          }
+      h1 The Comittee
+      hr(style='color: grey;')
+      br
+      .row2
+        .column2
+          .card3
+            .container4
+              h2 Sanjay
+              p.title Chairperson
+              p Some text that describes me.
+              p example@example.com
+              p
+                button.button Contact
+        .column2
+          .card3
+            .container4
+              h2 Sajan
+              p.title Ast. Chairperson
+              p Some text that describes me.
+              p example@example.com
+              p
+                button.button Contact
+        .column2
+          .card3
+            .container4
+              h2 Me
+              p.title Ast. Chairperson
+              p Some text that describes me.
+              p example@example.com
+              p
+                button.button Contact
+      style.
+        html {
+        box-sizing: border-box;
+        }
+        *, *:before, *:after {
+        box-sizing: inherit;
+        }
+        .column2 {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+        }
+        @media (max-width: 650px) {
+        .column {
+        width: 100%;
+        display: block;
+        }
+        }
+        .card3 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .container4 {
+        padding: 0 16px;
+        }
+        .container4::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        .title {
+        color: grey;
+        }
+        .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        }
+        .button:hover {
+        background-color: #555;
+        }
+        div.card3:hover {
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        }
+      // ################################################################################################
+    // ################################################################################################
+    // / main body
+    .clear
+
+include ../inc/footer

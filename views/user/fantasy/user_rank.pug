@@ -1,0 +1,20 @@
+extends ../inc/layout
+block content
+    include fantasy_nav
+    .wrapper.row2
+        section.hoc.container.clear
+            h2  Ranking all the User on the basis of their Points
+            table.table.table-striped
+                thead
+                    tr
+                        th(scope='col') #SN
+                        th(scope='col') User Name
+                        th(scope='col') User Id
+                        th(scope='col') Points
+                    each data,i in datas
+                        tr
+                            th #{i+1}
+                            th #{data.user_name}
+                            th #{data.user_id}
+                            th #{data.user_points}
+                tbody

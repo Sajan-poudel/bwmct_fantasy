@@ -1,0 +1,22 @@
+{
+  "name": "kct2017",
+  "version": "1.0.0",
+  "description": "This is our official fantasy page!!!",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.0",
+    "express-session": "^1.15.6",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.1",
+    "multer": "^1.3.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Class 12",
+  "license": "MIT"
+}

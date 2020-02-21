@@ -1,0 +1,38 @@
+extends ../inc/layout
+block content
+    
+    include ../fantasy/fantasy_nav
+
+    .wrapper.row2
+        section.hoc.container.clear       
+            #signup-box
+                if message
+                    .alert.alert-danger
+                        strong Bummer!
+                        |  You have already sent your prediction, wait for the next gameweek             
+                .left
+                    h1 Predict And Win
+                    
+                    h3 #{datas[0].team1_name} vs #{datas[0].team2_name}
+                    
+                    form(method='POST')
+
+                        p Team name:     
+                        select(name='team')
+                            option(value=''+datas[0].team1_name) #{datas[0].team1_name}
+                            |   
+                            option(value=''+datas[0].team2_name) #{datas[0].team2_name}
+                            |
+                        
+                        p Man of the match:
+                        select(name='player')
+                            each player in players
+                                option(value=''+player) #{player}
+                                |   
+                        
+                        br
+
+                        | &#x9;&#x9;&#x9;
+                        input(type='text', name='secret', placeholder='Our secret message', required='')
+                        | &#x9;&#x9;&#x9;
+                        input(type='submit', value='I predict this')

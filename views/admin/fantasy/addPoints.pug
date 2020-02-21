@@ -1,0 +1,48 @@
+extends ../inc/layout
+block content
+   
+   .col-md-6(style='width:80%;')
+    .content-box-large
+      .panel-heading
+        .panel-title Create Players Points
+      .panel-body
+        form(action='', method='POST')                    
+            table#inputTable.table.table-striped
+                tr  
+                    th SN
+                    th Player
+                    th GameName
+                    th Runs
+                    th Wickets
+                    th Catches
+                    th RunOuts
+                    th MadeIns
+                    th DogOuts
+
+
+                each player,i in players
+                    tr
+                        td #{i+1}
+
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='', value=`${player}`)
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')
+
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')    
+                            
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')
+                        td 
+                            input.form-control(type='text', name=`${i}` ,required='')
+                
+                                           
+            button.btn.btn-primary(name='action', type='submit') Add The Points
+    

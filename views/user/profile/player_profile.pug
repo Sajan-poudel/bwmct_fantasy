@@ -1,0 +1,30 @@
+extends ../inc/layout
+
+block content
+  include ../fantasy/fantasy_nav
+  .center
+    h2 Player Profile: #{data.name}    
+  .container
+    .row
+      .col-xs-12.col-sm-6.col-md-6
+        .well.well-sm
+          .row
+            .col-sm-6.col-md-4
+              img.img-rounded.img-responsive(src='user/images/demo/avatarp.png', alt='img')
+            .col-sm-6.col-md-8
+              h4
+                | #{data.name}
+              p Price: #{data.price}
+              p Team Name: #{data.teamName}
+              p Total Points: #{data.points}
+              br
+              p Game Infos:
+
+              each match,i in data.matchStats
+                p Game Name: #{match.GameName}
+                ul
+                  li Runs: #{match.Runs}
+                  li Wickets: #{match.Runs}
+                  li Catches: #{match.Runs}
+                  li Points: #{match.Points} 
+  

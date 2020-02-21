@@ -1,0 +1,89 @@
+extends ../inc/layout
+block content
+    h1 Update Database
+    b match name must be entered other fields will be updated if they have value
+    form(method='POST' action='')
+        label(for='match') Match:
+        input(type='number', name='match', min="1" max="9")
+        br
+        label(for='team1') Team1:
+        input(type='string', name='team1')
+        br
+        label(for='team2') Team2:
+        input(type='string', name='team2')
+        br
+        label(for='type') Type:
+        input(type='string', name='type')
+        br
+        label(for='date') Starting Date
+        br
+        | Year: 
+        select(name='year')
+            option(value='2017') 2017
+            option(value='2018') 2018
+        | Month: 
+        select(name='month')
+            option(value='January') jan
+            option(value='February') feb
+            option(value='March') mar
+            option(value='April') apr
+            option(value='May') may
+            option(value='June') jun
+            option(value='July') jul
+            option(value='August') aug
+            option(value='September') sept
+            option(value='October') oct
+            option(value='November') nov
+            option(value='December') dec
+        | Day:
+        input(type='number', name='day')
+        | Hours:
+        input(type='number', name='hours')
+        | Minutes:
+        input(type='number', name='minutes')
+        br
+        label(for='completed') Completed:
+        select(name='completed')
+            option(value='true') Yes
+            option(value='false') No
+        br
+        label(for='winningTeam') Winning Team:
+        input(type='string', name='winningTeam')
+        br
+        label(for='winningBy') Won By:
+        input(type='number', name='winBy')
+        br
+        label(for='winningType') Winning Type:
+        select(name='winType')
+            option(value='runs') Run
+            option(value='wickets') Wicket
+        br
+        br
+        label(for='run1') Runs of team1(including extras):
+        input(type='number', name='run1')
+        br
+        label(for='extras1') Extras of team1:
+        input(type='number', name='extras1')
+        br
+        label(for='wicket1') Wickets of team1:
+        input(type='number', name='wicket1')
+        br
+        label(for='over1') Overs played by team1:
+        input(type='string', name='over1')
+        br
+        label(for='run2') Runs of team2(including extras):
+        input(type='number', name='run2')
+        br
+        label(for='extras2') Extras of team2:
+        input(type='number', name='extras2')
+        br
+        label(for='wicket2') Wickets of team 2:
+        input(type='number', name='wicket2')
+        br
+        label(for='over2') Overs played by team2:
+        input(type='string', name='over2')
+        br
+        label(for='manOfMatch') Man of the match:
+        input(type='string', name='manOfMatch')
+        input(type='submit')
+        input(type='reset')

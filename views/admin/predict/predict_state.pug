@@ -1,0 +1,24 @@
+extends ../inc/layout
+block content
+  
+  // Create database!
+  .col-md-6  
+    .content-box-large
+      .panel-heading
+        .panel-title Predict
+      .panel-body
+        form(action='', method='POST')
+          fieldset
+            
+            h2 Is prediction Open
+
+            p State:
+            select(name='state')
+                  option(value='False') False
+                  |
+                  option(value='True') True
+                  |                                      
+            br
+            br
+
+          button.btn.btn-primary(name='action', type='submit') Add News

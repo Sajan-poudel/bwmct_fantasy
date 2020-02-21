@@ -1,0 +1,84 @@
+.col-md-2
+  .sidebar.content-box(style='display: block;')
+    ul.nav
+      // Main menu
+      li
+        a(href='#')
+          i.glyphicon.glyphicon-home
+          |  Dashboard
+      li.submenu
+        a(href='#')
+          i.glyphicon.glyphicon-pencil
+          |  Fantasy
+          span.caret.pull-right
+        // Sub menu
+        ul
+          li
+            a(href='predict') Make Predict
+
+          li
+            a(href='predict_show') View Predict
+
+          li
+            a(href='#') Match Details
+      li.submenu
+        a(href='#')
+          i.glyphicon.glyphicon-pencil
+          |  News 
+          span.caret.pull-right
+        // Sub menu
+        ul
+          li.current
+            a(href='create') Create New
+          li
+            a(href='update') Update
+          li
+            a(href='gallery') Upload in Gallery
+
+      li.submenu
+        a(href='#')
+          i.glyphicon.glyphicon-pencil
+          |  Players 
+          span.caret.pull-right
+        // Sub menu
+        ul
+          li.current
+            a(href='add_player') Add New Player
+
+      li.submenu
+        a(href='#')
+          i.glyphicon.glyphicon-pencil
+          |  Matches 
+          span.caret.pull-right
+        // Sub menu
+        ul
+          li.current
+            a(href='initializeMatchInfo') Init match db
+          li.current
+            a(href='updateMatchInfo') Update match db
+      
+      li.submenu
+        a(href='#')
+          i.glyphicon.glyphicon-pencil
+          |  Add Points 
+          span.caret.pull-right
+        // Sub menu
+        ul
+          li.current
+            a(href='addPoints?team=8') Team 8
+        ul
+          li.current
+            a(href='addPoints?team=9') Team 9
+        ul
+          li.current
+            a(href='addPoints?team=10') Team 10
+        ul
+          li.current
+            a(href='addPoints?team=11') Team 11
+        ul
+          li.current
+            a(href='addPoints?team=12A') Team 12A
+        ul
+          li.current
+            a(href='addPoints?team=12B') Team 12B
+      

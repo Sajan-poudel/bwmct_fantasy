@@ -1,0 +1,25 @@
+extends inc/layout
+block content
+  
+  // Create database!
+  .col-md-6  
+    .content-box-large
+      .panel-heading
+        .panel-title Create New Post
+      .panel-body
+        form(action='', method='POST', enctype='multipart/form-data')
+          fieldset
+            .form-group
+              label Title
+              input.form-control(placeholder='Title', type='text', name='title', required='')
+            .form-group
+              label Author
+              input.form-control(placeholder='Author', type='text', name='author' ,required='')
+            .form-group
+              label Textarea
+              textarea.form-control(placeholder='Textarea', rows='15', cols='5', name='news' ,required='')
+            .form-group
+              label Upload Image
+              input(type='file', name='file_image' ,required='')
+          
+          button.btn.btn-primary(name='action', type='submit') Add News

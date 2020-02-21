@@ -1,0 +1,15 @@
+extends inc/layout
+block content  
+  // Update database!
+  .col-md-6
+    .content-box-large
+      .panel-heading
+        .panel-title Update Post
+      .panel-body
+        each data in datas
+          p #{data.post_name}
+          img(src='../uploads/news/'+data.post_image, width='200', height='200')
+          a(href='delete?_id='+data._id)
+            button(style='margin: 2px;') Delete
+          br
+          hr

@@ -1,0 +1,29 @@
+doctype html
+head
+  title Admin Panel
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  // Bootstrap
+  link(href='../admin/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+  // styles
+  link(href='../admin/css/styles.css', rel='stylesheet')
+  head
+    title Admin Panel
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // Bootstrap
+    link(href='../admin/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // styles
+    link(href='../admin/css/styles.css', rel='stylesheet')
+  .header
+    .container
+      .row
+        .col-md-5
+          // Logo
+          .logo
+            h1
+              a(href='index.html') Admin Page
+        .col-md-2
+          .navbar.navbar-inverse(role='banner')
+            nav.collapse.navbar-collapse.bs-navbar-collapse.navbar-right(role='navigation')
+              ul.nav.navbar-nav
+                li.dropdown
+                  a(href='logout') Log Out

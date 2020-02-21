@@ -1,0 +1,39 @@
+extends ../inc/layout
+block content
+  
+  // Create database!
+  .col-md-6  
+    .content-box-large
+      .panel-heading
+        .panel-title Create New Prediction
+      .panel-body
+        form(action='', method='POST')
+          fieldset
+            
+            h2 Make the prediction
+
+            p Team1:
+            select(name='team1')
+                each data in datas
+                  option(value=''+data.name) #{data.name}
+                  |       
+            br
+            br
+
+            p Team2:
+            select(name='team2')
+                each data in datas
+                  option(value=''+data.name) #{data.name}
+                  |                   
+            br
+            br
+
+            .form-group
+              label Game Title
+              input.form-control(placeholder='Title', type='text', name='title', required='')
+
+            .form-group
+              label Author
+              input.form-control(placeholder='Author', type='text', name='author' ,required='')
+
+          button.btn.btn-primary(name='action', type='submit') Add News

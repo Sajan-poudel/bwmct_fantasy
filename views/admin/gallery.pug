@@ -1,0 +1,20 @@
+extends inc/layout
+block content
+  
+  // Create database!
+  .col-md-6  
+    .content-box-large
+      .panel-heading
+        .panel-title Create New Gallery Post
+      .panel-body
+        form(method='POST', enctype='multipart/form-data')
+          fieldset
+            
+            .form-group
+              label Image Title
+              input.form-control(placeholder='Image Title', type='text', name='title', required='')
+            
+            .form-group
+              label Upload Image
+              input(type='file',name='file_image')
+          button.btn.btn-primary(name='action', type='submit', required='') Add News

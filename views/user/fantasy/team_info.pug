@@ -1,0 +1,26 @@
+extends ../inc/layout
+block content
+    include fantasy_nav
+    .wrapper.row2
+        section.hoc.container.clear
+            h2  Your Team
+            table.table.table-striped
+                thead
+                    tr
+                        th(scope='col') #SN
+                        th(scope='col') Player Image
+                        th(scope='col') Player Name
+                        th(scope='col') Price
+                        th(scope='col') Team Name
+                tbody
+                    each data, i in datas
+                        tr
+                            td #{i+1}
+                            td
+                                a(href=`/player_profile?name=${data.name}`) 
+                                    img(src='user/images/demo/avatarp.png', style='height:4em; width:4em;')
+                            td
+                                a(href=`/player_profile?name=${data.name}`) 
+                                    |#{data.name}
+                            td #{data.price}
+                            td #{data.teamName}

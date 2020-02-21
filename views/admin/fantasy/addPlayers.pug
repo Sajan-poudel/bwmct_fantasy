@@ -1,0 +1,28 @@
+extends ../inc/layout
+block content
+   
+   .col-md-6  
+    .content-box-large
+      .panel-heading
+        .panel-title Create Players Data
+      .panel-body
+        form(action='', method='POST')
+          fieldset
+            .form-group
+              select#sel1.form-control(name='teamName')
+                option Team 8
+                option Team 9
+                option Team 10
+                option Team 11
+                option Team 12A
+                option Team 12B
+                             
+            table#inputTable.table.table-striped
+                tr  
+                    th SN
+                    th Player Name
+                    th Player Price
+                
+          button.btn.btn-primary(name='action', type='submit') Add Players
+    
+    script(src='../admin/js/addPlayer.js')

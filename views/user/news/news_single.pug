@@ -1,0 +1,36 @@
+// News Wrapper
+.wrapper.row2
+  section.hoc.container.clear
+    // ################################################################################################
+    h2.font-x3.uppercase.btmspace-80.underlined
+      a(href='news_all')
+        | News > 
+      |#{datas.post_name}
+    
+    .panel
+      .panel-heading
+        .text-center
+          .row
+            .col-sm-9
+              //Author name
+              h3.pull-left Posted by: #{datas.post_author}
+            .col-sm-3
+              h4.pull-right
+                small
+                  //Date
+                  em On #{datas.post_date}
+      .panel-body
+        //image 
+        img(alt='Image', src='uploads/news/'+datas.post_image)
+        br
+        br
+      
+      //news content
+      .panel-body=datas.post_news
+
+      .panel-footer
+        span.label.label-default Image
+        span.label.label-default Updates
+        span.label.label-default July
+             
+// news wrapper

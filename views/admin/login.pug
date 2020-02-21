@@ -1,0 +1,16 @@
+include inc/header
+.container
+  form.form-signin(method='POST')
+    h2.form-signin-heading Admin Sign In
+    br
+
+    label.sr-only(for='inputEmail') Admin
+    input#inputEmail.form-control(type='text', placeholder='Admin Id', required='', autofocus='', name='id')
+    br
+
+    label.sr-only(for='inputPassword') Password
+    input#inputPassword.form-control(type='password', placeholder='Password', required='', name='pass')
+    br
+
+    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+// /container

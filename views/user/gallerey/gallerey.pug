@@ -1,0 +1,19 @@
+extends ../inc/layout
+block content
+    .wrapper.row2
+        section.hoc.container.clear
+            h2.font-x3.uppercase.btmspace-80
+                | Gallery>
+                        
+            #gallery
+                figure
+                    ul.nospace.clear
+                        each data,i in datas
+                            if i==0 
+                                li.one_quarter.first
+                                    img(src='uploads/gall/'+data.post_image, alt='image0',style='width:500px; height:200px;')
+                                    figcaption #{data.post_name}
+                            else
+                                li.one_quarter
+                                    img(src='uploads/gall/'+data.post_image, alt='image',style='width:500px; height:200px;')
+                                    figcaption #{data.post_name}    

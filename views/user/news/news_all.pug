@@ -1,0 +1,21 @@
+extends ../inc/layout
+block content
+    .wrapper.row2
+        section.hoc.container.clear
+            h2.font-x3.uppercase.btmspace-80
+                | All News>
+                        
+            #gallery
+                figure
+                    ul.nospace.clear
+                        each data,i in datas
+                            if i==0
+                                li.one_quarter.first
+                                    img(src='uploads/news/'+data.post_image, alt='image',style='width:500px; height:200px;')
+                                    a(href=`news?_id=${data._id}`)
+                                        figcaption #{data.post_name}
+                            else
+                                li.one_quarter
+                                    img(src='uploads/news/'+data.post_image, alt='image',style='width:500px; height:200px;')
+                                    a(href=`news?_id=${data._id}`)
+                                        figcaption #{data.post_name}

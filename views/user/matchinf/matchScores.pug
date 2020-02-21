@@ -1,0 +1,45 @@
+extends ../inc/layout    
+block content
+    link(href='../user/layout/styles/matchinf.css', rel='stylesheet', type='text/css', media='all')
+    #wrapper
+        #wrapper1 
+            #resMain Match #{m.position} Scores
+                
+                .result1 
+                    b Played on : 
+                    | #{m.dateStart.toDateString()}
+                    br
+                    b Game type : 
+                    | #{m.type}
+                - for(let i = 0 ; i < 2 ; i++){
+                | Team #{m['team'+(i+1)]} 
+                div(style='overflow-x:auto ; width:100%')
+                    table
+                        tr
+                            th Player
+                            th Run
+                            th Balls
+                            th SR
+                            th Wicket
+                            th Scores
+                        - let y=0;
+                        - for(let z=0 ; z<arr[i].length ; z++){
+                        tr 
+                            td #{arr[i][z].name}
+                            td #{arr[i][z].Runs}
+                            td #{arr[i][z].Balls}
+                            td #{arr[i][z].StrikeRate.toFixed(2)}
+                            td #{arr[i][z].Wickets}
+                            td #{arr[i][z].Points}
+                            - y+=arr[i][z].Points
+                        - } 
+                        tr
+                            td(style='border-right-width : 0px') Extras
+                            td(colspan='6' style='text-align : right; border-left-width : 0px') #{m['extras'+(i+1)]}
+                        tr
+                            td(style='border-right-width : 0px')
+                                b Total
+                            td(colspan='6' style='text-align : right; border-left-width : 0px') 
+                                b #{m['run'+(i+1)]}/#{m['wicket'+(i+1)]} (#{m['over'+(i+1)]} overs, RR:#{(m['wicket'+(i+1)]===10)?((m['run'+(i+1)])/20).toFixed(2):((m['run'+(i+1)])/(m['over'+(i+1)])).toFixed(2)}) | #{y} scores
+                    br
+                - }

@@ -1,0 +1,37 @@
+// News Wrapper
+.wrapper.row2
+  section.hoc.container.clear
+    // ################################################################################################
+    h2.font-x3.uppercase.btmspace-80.underlined
+      | Latest 
+      a(href='#') News
+    ul.nospace.elements
+      each news,i in news_datas
+        if i==0
+          li.one_third.first
+            article
+              img(src='uploads/news/'+news.post_image, alt=''+news.post_name)
+              .txtwrap
+                h6.heading #{news.post_name}
+                time(datetime='2045-04-06')
+                  p
+                    | #{news.post_date}
+
+                p
+                  | #{news.post_name}
+                footer
+                  a(href='news?_id='+news._id) Read More »
+        else
+          li.one_third
+                      article
+                        img(src='uploads/news/'+news.post_image, alt=''+news.post_name)
+                        .txtwrap
+                          h6.heading #{news.post_name}
+                          time(datetime='2045-04-06')
+                            p
+                              | #{news.post_date}
+
+                          p
+                            | #{news.post_name}
+                          footer
+                            a(href='news?_id='+news._id) Read More »    

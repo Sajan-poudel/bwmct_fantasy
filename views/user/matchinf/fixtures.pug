@@ -1,0 +1,55 @@
+extends ../inc/layout    
+block content
+    link(href='user/layout/styles/matchinf.css', rel='stylesheet', type='text/css', media='all')
+    #wrapper
+        #wrapper1
+            #coming
+                - if(data[x].today){			
+                | TODAY
+                - }else{
+                | COMING SOON		  
+                - }
+                div
+                    div(style=' width: 20%; float : left')
+                        img(src='team logos/Team' +data[x].team1+'.png', style='width : 80%')
+                        |                 Team #{data[x].team1}
+                    div(style=' width: 20%; float : right')
+                        img(src='team logos/Team' +data[x].team2+'.png', caption='Team 11', style='width : 80%')
+                        |                 Team #{data[x].team2}
+                    br
+                    b vs
+                |            #{data[x].type}
+                br
+                |             #{data[x].dateStart.toDateString()},  #{data[x].dateStart.toLocaleTimeString()}
+            h1 All matches
+            #fixture
+                - for(let i = 0 ; i < data.length ; i++){
+                - if(data[i].completed){
+                #completed.fixture-1
+                    #rightFloatDiv Completed
+                    #leftFloatDiv  
+                    div MATCH #{i+1}
+                - }else if(data[i].today){
+                #today.fixture-1
+                    #rightFloatDiv Today
+                    #leftFloatDiv  
+                    div MATCH #{i+1}
+                - }else{
+                #upcoming.fixture-1
+                    #rightFloatDiv Upcoming
+                    #leftFloatDiv  
+                    div MATCH #{i+1}
+                - }
+                #fixture-2
+                    #leftFloatDiv #{data[i].dateStart.toDateString()}
+                    #rightFloatDiv #{data[i].dateStart.toLocaleTimeString()}
+                    div
+                        #lfd1
+                            img.a(src='team logos/Team' +data[i].team1+'.png', style='width : 25%')
+                            | Team #{data[i].team1}
+                        #rfd1
+                            img.b(src='team logos/Team' +data[i].team2+'.png', style='width : 25%')
+                            | Team #{data[i].team2}
+                        | vs 
+                    |                     #{data[i].type}
+                - }
